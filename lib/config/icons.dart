@@ -11,4 +11,7 @@ class AppIcons {
   static String messenger = 'assets/icons/messenger.svg';
   static String plus = 'assets/icons/plus.svg';
   static String add = 'assets/icons/add.svg';
+  static String more = 'assets/icons/more.svg';
+  static String message = 'assets/icons/message.svg';
+  static String share = 'assets/icons/share.svg';
 }

@@ -16,8 +16,7 @@ class HomeAddStories extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 30,
-              backgroundImage:
-                  CachedNetworkImageProvider(NetworkImages.dog),
+              backgroundImage: CachedNetworkImageProvider(NetworkImages.dog),
             ),
             Positioned(
                 right: -5,

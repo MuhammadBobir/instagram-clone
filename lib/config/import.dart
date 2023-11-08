@@ -18,3 +18,4 @@ export 'package:instagram_clone_ui/components/home/HomeStoriesItem.dart';
 export 'package:instagram_clone_ui/components/home/HomeStoriesList.dart';
 export 'package:instagram_clone_ui/utils/Helpers.dart';
 export 'package:instagram_clone_ui/config/Colors.dart';
+export 'package:instagram_clone_ui/base/ProfileImage.dart';
