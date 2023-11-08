@@ -18,7 +18,11 @@ class Post extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 7),
             child: Row(
               children: [
-                ProfileImage(img: post['profile_img'], radius: 20),
+                InkWell(
+                    onTap: () {
+                      Get.to(() => const UserProfile());
+                    },
+                    child: ProfileImage(img: post['profile_img'], radius: 20)),
                 const SizedBox(
                   width: 8,
                 ),
