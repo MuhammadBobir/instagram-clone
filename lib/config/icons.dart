@@ -3,7 +3,7 @@ class AppIcons {
   static String search = 'assets/icons/search.svg';
   static String media = 'assets/icons/media.svg';
   static String storybook = 'assets/icons/storybook.svg';
-  static String ball = 'assets/icons/ball.svg';
+  static String ball = 'assets/icons/bal.svg';
   static String history = 'assets/icons/history.svg';
   static String addUser = 'assets/icons/add_user.svg';
   static String logo = 'assets/icons/logo.svg';
@@ -14,4 +14,5 @@ class AppIcons {
   static String more = 'assets/icons/more.svg';
   static String message = 'assets/icons/message.svg';
   static String share = 'assets/icons/share.svg';
+  static String official = 'assets/icons/official.svg';
 }
