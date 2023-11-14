@@ -21,3 +21,4 @@ export 'package:instagram_clone_ui/config/Colors.dart';
 export 'package:instagram_clone_ui/base/ProfileImage.dart';
 export 'package:instagram_clone_ui/components/home/Post.dart';
 export 'package:instagram_clone_ui/pages/UserProfile.dart';
+export 'package:instagram_clone_ui/base/Button.dart';

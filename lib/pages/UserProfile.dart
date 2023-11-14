@@ -10,6 +10,7 @@ class UserProfile extends StatefulWidget {
 }
 
 class _UserProfileState extends State<UserProfile> {
+  List imagas = [NetworkImages.dog, NetworkImages.man, NetworkImages.woman];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -93,17 +94,84 @@ class _UserProfileState extends State<UserProfile> {
                   Row(
                     children: [
                       SizedBox(
-                        height: 100,
+                        height: 50,
                         width: 100,
                         child: Stack(
                           children: List.generate(3, (index) {
                             return Positioned(
                                 right: 25.0 * index,
-                                child: ProfileImage(
-                                    img: NetworkImages.dog, radius: 15));
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.white, width: 3),
+                                      borderRadius: BorderRadius.circular(50)),
+                                  child: CircleAvatar(
+                                    radius: 20,
+                                    backgroundImage: CachedNetworkImageProvider(
+                                        imagas[index]),
+                                  ),
+                                ));
                           }),
                         ),
-                      )
+                      ),
+                      const SizedBox(width: 12),
+                      const SizedBox(
+                        width: 230,
+                        child: Text.rich(TextSpan(children: [
+                          TextSpan(text: "Followed by"),
+                          TextSpan(
+                              text: " username, username",
+                              style: TextStyle(fontWeight: FontWeight.w700)),
+                          TextSpan(text: " and"),
+                          TextSpan(
+                              text: " 100 others",
+                              style: TextStyle(fontWeight: FontWeight.w700)),
+                        ])),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  SizedBox(
+                    width: double.maxFinite,
+                    child: Button(
+                      text: "Follow",
+                      textColor: Colors.white,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  const SizedBox(height: 9),
+
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Button(
+                          color: Colors.grey.shade300,
+                          text: "Message",
+                          textColor: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(width: 6),
+                      Expanded(
+                        child: Button(
+                          color: Colors.grey.shade300,
+                          text: "Subscribe",
+                          textColor: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(width: 6),
+                      Expanded(
+                        child: Button(
+                          color: Colors.grey.shade300,
+                          text: "Contact",
+                          textColor: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(width: 6),
+                      Button(
+                        color: Colors.grey.shade300,
+                        icon: Icons.group_add_sharp,
+                        textColor: Colors.black,
+                      ),
                     ],
                   )
                 ],
@@ -112,26 +180,6 @@ class _UserProfileState extends State<UserProfile> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class Statics extends StatelessWidget {
-  String count;
-  String text;
-  Statics({
-    super.key,
-    required this.text,
-    required this.count,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(count, style: const TextStyle(fontWeight: FontWeight.w700)),
-        Text(text, style: const TextStyle(fontWeight: FontWeight.w400)),
-      ],
     );
   }
 }
