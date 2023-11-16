@@ -1,7 +1,5 @@
 // ignore_for_file: file_names, must_be_immutable
-
 import 'package:instagram_clone_ui/config/import.dart';
-import 'package:instagram_clone_ui/stores/user_profile_controller.dart';
 
 class UserProfile extends StatefulWidget {
   const UserProfile({super.key});
@@ -45,20 +43,28 @@ class _UserProfileState extends State<UserProfile> {
             body: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                UserProfileHeader(),
+                const UserProfileHeader(),
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      UserProfileInfo(),
+                      const UserProfileInfo(),
                       const SizedBox(height: 12),
                       UserProfileFollowers(imagas: imagas),
                       const SizedBox(height: 12),
-                      UserProfileActions(),
-                      Row(
-                        children: [],
+                      const UserProfileActions(),
+                      const SizedBox(height: 10),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                            children: List.generate(controller.fovorites.length,
+                                (index) {
+                          var item = controller.fovorites[index];
+                          return UserProfileFovorite(
+                              img: item['img'], text: item['name']);
+                        })),
                       )
                     ],
                   ),
@@ -71,3 +77,5 @@ class _UserProfileState extends State<UserProfile> {
     );
   }
 }
+// UserProfileFovorite()
+

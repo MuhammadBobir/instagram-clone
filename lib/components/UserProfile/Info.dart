@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:instagram_clone_ui/config/import.dart';
 
 class UserProfileInfo extends StatelessWidget {

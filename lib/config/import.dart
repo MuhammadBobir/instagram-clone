@@ -26,3 +26,5 @@ export 'package:instagram_clone_ui/components/UserProfile/Header.dart';
 export 'package:instagram_clone_ui/components/UserProfile/Info.dart';
 export 'package:instagram_clone_ui/components/UserProfile/Followers.dart';
 export 'package:instagram_clone_ui/components/UserProfile/Action.dart';
+export 'package:instagram_clone_ui/components/UserProfile/Favorites.dart';
+export 'package:instagram_clone_ui/stores/user_profile_controller.dart';
