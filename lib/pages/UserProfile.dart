@@ -1,4 +1,5 @@
 // ignore_for_file: file_names, must_be_immutable
+
 import 'package:instagram_clone_ui/config/import.dart';
 
 class UserProfile extends StatefulWidget {
@@ -40,22 +41,28 @@ class _UserProfileState extends State<UserProfile> {
                     onPressed: () {}, icon: SvgPicture.asset(AppIcons.more)),
               ],
             ),
-            body: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const UserProfileHeader(),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                  child: Column(
+            body: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const UserProfileHeader(),
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const UserProfileInfo(),
-                      const SizedBox(height: 12),
-                      UserProfileFollowers(imagas: imagas),
-                      const SizedBox(height: 12),
-                      const UserProfileActions(),
-                      const SizedBox(height: 10),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 10),
+                        child: Column(
+                          children: [
+                            const UserProfileInfo(),
+                            const SizedBox(height: 12),
+                            UserProfileFollowers(imagas: imagas),
+                            const SizedBox(height: 12),
+                            const UserProfileActions(),
+                            const SizedBox(height: 10),
+                          ],
+                        ),
+                      ),
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
@@ -65,11 +72,15 @@ class _UserProfileState extends State<UserProfile> {
                           return UserProfileFovorite(
                               img: item['img'], text: item['name']);
                         })),
-                      )
+                      ),
+                      const SizedBox(height: 10),
+                      Tabs(controller: controller),
+                      const SizedBox(height: 10),
+                      controller.tabsWidget(controller)
                     ],
                   ),
-                )
-              ],
+                ],
+              ),
             ),
           ),
         );

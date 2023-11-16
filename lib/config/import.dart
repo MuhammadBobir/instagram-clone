@@ -28,3 +28,7 @@ export 'package:instagram_clone_ui/components/UserProfile/Followers.dart';
 export 'package:instagram_clone_ui/components/UserProfile/Action.dart';
 export 'package:instagram_clone_ui/components/UserProfile/Favorites.dart';
 export 'package:instagram_clone_ui/stores/user_profile_controller.dart';
+export 'package:instagram_clone_ui/components/UserProfile/Tabs/TabButton.dart';
+export 'package:instagram_clone_ui/components/UserProfile/Tabs/Tabs.dart';
+export 'package:instagram_clone_ui/components/UserProfile/Tabs/MenuImage.dart';
+export 'package:instagram_clone_ui/components/UserProfile/Tabs/Menu.dart';

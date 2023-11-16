@@ -15,4 +15,7 @@ class AppIcons {
   static String message = 'assets/icons/message.svg';
   static String share = 'assets/icons/share.svg';
   static String official = 'assets/icons/official.svg';
+  static String menu = 'assets/icons/menu.svg';
+  static String media2 = 'assets/icons/media2.svg';
+  static String user = 'assets/icons/user.svg';
 }
