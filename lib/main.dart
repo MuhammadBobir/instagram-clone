@@ -1,6 +1,7 @@
 import "package:instagram_clone_ui/config/import.dart";
 
-void main() {
+void main() async {
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -12,10 +13,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      darkTheme: Themes.dark,
+      theme: Themes.light,
+      themeMode: ThemeService().theme, 
       home: const SafeArea(child: MainPage()),
     );
   }

@@ -17,7 +17,10 @@ class HomeHeader extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SvgPicture.asset(AppIcons.logo),
+              SvgPicture.asset(
+                AppIcons.logo,
+                color: context.theme.primaryColor,
+              ),
               const SizedBox(width: 8),
               const Icon(Icons.keyboard_arrow_down_outlined)
             ],
@@ -25,11 +28,28 @@ class HomeHeader extends StatelessWidget {
           // const Spacer(),
           Row(
             children: [
-              SvgPicture.asset(AppIcons.like),
+              IconButton(
+                onPressed: () {
+                  ThemeService().switchTheme();
+                },
+                icon: Icon(context.theme.primaryColor == Colors.black
+                    ? Icons.dark_mode
+                    : Icons.light_mode),
+              ),
+              SvgPicture.asset(
+                AppIcons.like,
+                color: context.theme.primaryColor,
+              ),
               const SizedBox(width: 24),
-              SvgPicture.asset(AppIcons.messenger),
+              SvgPicture.asset(
+                AppIcons.messenger,
+                color: context.theme.primaryColor,
+              ),
               const SizedBox(width: 24),
-              SvgPicture.asset(AppIcons.plus),
+              SvgPicture.asset(
+                AppIcons.plus,
+                color: context.theme.primaryColor,
+              ),
             ],
           )
         ],

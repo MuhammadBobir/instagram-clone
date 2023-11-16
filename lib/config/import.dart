@@ -32,3 +32,6 @@ export 'package:instagram_clone_ui/components/UserProfile/Tabs/TabButton.dart';
 export 'package:instagram_clone_ui/components/UserProfile/Tabs/Tabs.dart';
 export 'package:instagram_clone_ui/components/UserProfile/Tabs/MenuImage.dart';
 export 'package:instagram_clone_ui/components/UserProfile/Tabs/Menu.dart';
+export "package:get_storage/get_storage.dart";
+export "package:instagram_clone_ui/utils/Themes.dart";
+export "package:instagram_clone_ui/utils/ThemeServise.dart";

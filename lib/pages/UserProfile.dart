@@ -36,9 +36,17 @@ class _UserProfileState extends State<UserProfile> {
               ),
               actions: [
                 IconButton(
-                    onPressed: () {}, icon: SvgPicture.asset(AppIcons.ball)),
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      AppIcons.ball,
+                      color: context.theme.primaryColor,
+                    )),
                 IconButton(
-                    onPressed: () {}, icon: SvgPicture.asset(AppIcons.more)),
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      AppIcons.more,
+                      color: context.theme.primaryColor,
+                    )),
               ],
             ),
             body: SingleChildScrollView(

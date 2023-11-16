@@ -21,7 +21,8 @@ class TabButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 5),
         child: SvgPicture.asset(
           icon,
-          color: selected ? qora : kulrang,
+          color:
+              selected ? context.theme.primaryColor : kulrang.withOpacity(0.8),
         ),
       ),
     ));

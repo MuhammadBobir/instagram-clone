@@ -29,7 +29,10 @@ class _MyWidgetState extends State<MainPage> {
                           onTap: () {
                             mainController.chooseCurrent(item['id']);
                           },
-                          child: SvgPicture.asset(item['icon']))
+                          child: SvgPicture.asset(
+                            item['icon'],
+                            color: context.theme.primaryColor,
+                          ))
                       : InkWell(
                           onTap: () {
                             mainController.chooseCurrent(5);
